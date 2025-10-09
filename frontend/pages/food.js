@@ -1,10 +1,8 @@
-import React from 'react';
-
 export default function Food() {
   return (
-    <div>
-      <h1>Food Page</h1>
-      <p>This is the food page. Add your food tracking or information here.</p>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <h1 className="text-4xl font-bold text-primary">Food Page</h1>
+      <p className="mt-4 text-lg text-gray-600">Navbar routing works!</p>
     </div>
   );
 }
