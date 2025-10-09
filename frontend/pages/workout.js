@@ -1,7 +1,8 @@
-import React from 'react';
-
-const Workout = () => {
-  return <h1>Workout Page</h1>;
-};
-
-export default Workout;
+export default function Workouts() {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <h1 className="text-4xl font-bold text-primary">Workouts Page</h1>
+      <p className="mt-4 text-lg text-gray-600">Navbar routing works!</p>
+    </div>
+  );
+}
