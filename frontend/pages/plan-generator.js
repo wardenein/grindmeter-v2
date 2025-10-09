@@ -1,10 +1,8 @@
-import React from 'react';
-
 export default function PlanGenerator() {
   return (
-    <div>
-      <h1>Plan Generator Page</h1>
-      <p>This is the plan generator page. Add your plan generation functionality here.</p>
+    <div className="flex flex-col items-center justify-center min-h-screen">
+      <h1 className="text-4xl font-bold text-primary">Plan Generator Page</h1>
+      <p className="mt-4 text-lg text-gray-600">Navbar routing works!</p>
     </div>
   );
 }
