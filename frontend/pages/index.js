@@ -23,7 +23,7 @@ export default function Home() {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/workouts">Workouts</Link>
+                <Link href="/workout">Workouts</Link>
               </li>
               <li>
                 <Link href="/food">Food</Link>
