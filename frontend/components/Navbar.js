@@ -7,7 +7,7 @@ export default function Navbar() {
         <div className="text-2xl font-bold text-purple-600">Grindmeter</div>
         <div className="space-x-4">
           <Link href="/" className="hover:text-purple-700">Home</Link>
-          <Link href="/workouts" className="hover:text-purple-700">Workouts</Link>
+          <Link href="/workout" className="hover:text-purple-700">Workouts</Link>
           <Link href="/food" className="hover:text-purple-700">Food</Link>
           <Link href="/plan-generator" className="hover:text-purple-700">Plan Generator</Link>
           <Link href="/profile" className="hover:text-purple-700">Profile</Link>
