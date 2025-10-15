@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { HomeIcon, FireIcon, FoodIcon, UserIcon } from '@heroicons/react/24/outline';
+import { HomeIcon, FireIcon, HeartIcon, UserIcon } from '@heroicons/react/24/outline';
 
 export default function BottomNav() {
   const router = useRouter();
