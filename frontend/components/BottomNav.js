@@ -13,5 +13,24 @@ export default function BottomNav() {
   ];
 
   return (
-    <div className="fixed bottom-0 w-full flex justify-around bg-gray-900 text-white border-t border-gray-700 py-3">
-      {navItems.map((ite
+    <nav className="fixed bottom-0 w-full flex justify-around bg-gray-900 text-white border-t border-gray-700 py-3">
+      {navItems.map((item) => {
+        const Icon = item.icon;
+        const isActive = router.pathname === item.path;
+
+        return (
+          <Link key={item.name} href={item.path}>
+            <div
+              className={`flex flex-col items-center text-sm ${
+                isActive ? 'text-white' : 'text-gray-400'
+              }`}
+            >
+              <Icon className="w-6 h-6" />
+              {item.name}
+            </div>
+          </Link>
+        );
+      })}
+    </nav>
+  );
+}
