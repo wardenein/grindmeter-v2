@@ -1,25 +1,37 @@
-import BottomNav from '../components/BottomNav';
-import ProgressBar from '../components/ProgressBar';
-import Agenda from '../components/Agenda';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrindMeter V2 Inspired</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <h1>GrindMeter</h1>
+        </div>
+    </header>
 
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white pb-20 px-4">
-      <h1 className="text-2xl font-bold mt-8">Home</h1>
+    <!-- Main Content Area -->
+    <main>
+        <div class="content">
+            <h2>Welcome to GrindMeter V2</h2>
+            <p>Your content here! This could be a chart, meter, or whatever you'd like to replicate.</p>
+            <!-- Example Input for dynamic behavior -->
+            <input type="range" id="meter" min="0" max="100" value="50">
+            <div id="valueDisplay">Current Value: 50</div>
+        </div>
+    </main>
 
-      <button className="w-full bg-gray-700 hover:bg-gray-600 rounded-sm py-3 mt-6 text-white font-semibold">
-        Start Workout Without Plan
-      </button>
+    <!-- Bottom Navbar -->
+    <nav class="bottom-navbar">
+        <button id="homeBtn">Home</button>
+        <button id="settingsBtn">Settings</button>
+        <button id="profileBtn">Profile</button>
+    </nav>
 
-      <div className="mt-6">
-        <Agenda />
-      </div>
-
-      <div className="mt-6">
-        <ProgressBar progress={0.45} />
-      </div>
-
-      <BottomNav />
-    </div>
-  );
-}
+    <script src="app.js"></script>
+</body>
+</html>
