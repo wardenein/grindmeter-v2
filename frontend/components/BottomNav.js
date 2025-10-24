@@ -1,36 +1,21 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { HomeIcon, FireIcon, ClipboardDocumentIcon, UserIcon } from '@heroicons/react/24/outline';
-
+// components/BottomNav.js
 export default function BottomNav() {
-  const router = useRouter();
-
-  const navItems = [
-    { name: 'Home', path: '/', icon: HomeIcon },
-    { name: 'Workout', path: '/workout', icon: FireIcon },
-    { name: 'Food', path: '/food', icon: ClipboardDocumentIcon },
-    { name: 'Profile', path: '/profile', icon: UserIcon },
-  ];
-
   return (
-    <nav className="fixed bottom-0 w-full flex justify-around bg-gray-900 text-white border-t border-gray-700 py-3">
-      {navItems.map((item) => {
-        const Icon = item.icon;
-        const isActive = router.pathname === item.path;
+    <nav className="fixed bottom-0 left-0 w-full bg-gray-900 text-white flex justify-around items-center py-3 shadow-lg">
+      <button className="flex flex-col items-center hover:text-yellow-400">
+        <span className="text-xl">🏠</span>
+        <span className="text-xs">Home</span>
+      </button>
 
-        return (
-          <Link key={item.name} href={item.path}>
-            <div
-              className={`flex flex-col items-center text-sm ${
-                isActive ? 'text-white' : 'text-gray-400'
-              }`}
-            >
-              <Icon className="w-6 h-6" />
-              {item.name}
-            </div>
-          </Link>
-        );
-      })}
+      <button className="flex flex-col items-center hover:text-yellow-400">
+        <span className="text-xl">📊</span>
+        <span className="text-xs">Stats</span>
+      </button>
+
+      <button className="flex flex-col items-center hover:text-yellow-400">
+        <span className="text-xl">⚙️</span>
+        <span className="text-xs">Settings</span>
+      </button>
     </nav>
   );
 }
